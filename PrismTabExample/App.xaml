@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PrismApplicaton
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PrismTabExample.App"
+    x:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms">
+    <Application.Resources>
+    </Application.Resources>
+</PrismApplicaton>
