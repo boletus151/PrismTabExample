@@ -2,6 +2,7 @@
 using Prism.Ioc;
 using Prism.Unity;
 using PrismTabExample.ViewModel;
+using PrismTabExample.View;
 using Xamarin.Forms;
 
 namespace PrismTabExample
@@ -38,8 +39,8 @@ namespace PrismTabExample
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<Tab1Page>();
-            containerRegistry.RegisterForNavigation<Tab2Page>();
+            containerRegistry.RegisterForNavigation<Tab1Page, Tab1PageViewModel>();
+            containerRegistry.RegisterForNavigation<Tab2Page, Tab2PageViewModel>();
 
             containerRegistry.RegisterForNavigation<FirstPage, FirstPageViewModel>();
             containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();

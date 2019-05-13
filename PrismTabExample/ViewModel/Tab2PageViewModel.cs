@@ -4,9 +4,9 @@ using Prism.Navigation;
 
 namespace PrismTabExample.ViewModel
 {
-    public class Tab1PageViewModel : BindableBase, INavigationAware
+    public class Tab2PageViewModel : BindableBase, INavigationAware
     {
-        public Tab1PageViewModel()
+        public Tab2PageViewModel()
         {
         }
 

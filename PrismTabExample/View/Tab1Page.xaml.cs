@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace PrismTabExample
+namespace PrismTabExample.View
 {
-    public partial class Tab1Page : ContentView
+    public partial class Tab1Page : ContentPage
     {
         public Tab1Page()
         {

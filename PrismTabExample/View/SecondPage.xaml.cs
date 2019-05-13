@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace PrismTabExample
+namespace PrismTabExample.View
 {
     public partial class SecondPage : ContentPage
     {

@@ -2,8 +2,8 @@
 <TabbedPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PrismTabExample.MainTabbedPage"
-    xmlns:local="clr-namespace:PrismTabExample.Views">
+    x:Class="PrismTabExample.View.MainTabbedPage"
+    xmlns:local="clr-namespace:PrismTabExample.View">
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <local:Tab1Page></local:Tab1Page>
