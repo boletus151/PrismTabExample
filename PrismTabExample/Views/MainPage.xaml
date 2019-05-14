@@ -3,13 +3,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PrismTabExample"
-    x:Class="PrismTabExample.View.MainPage">
+    x:Class="PrismTabExample.Views.MainPage">
     <StackLayout
         VerticalOptions="CenterAndExpand">
         <Entry
-            Text="{Binding TextToSay}" />
+            Text="Hello" />
         <Button
-            Text="Speak"
-            Command="{Binding GoToFirstCommand}" />
+            Text="Speak" />
     </StackLayout>
 </ContentPage>

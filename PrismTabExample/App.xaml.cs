@@ -1,9 +1,10 @@
 ﻿using Prism;
 using Prism.Ioc;
 using Prism.Unity;
-using PrismTabExample.ViewModel;
-using PrismTabExample.View;
+using PrismTabExample.ViewModels;
+using PrismTabExample.Views;
 using Xamarin.Forms;
+using System;
 
 namespace PrismTabExample
 {
@@ -13,37 +14,26 @@ namespace PrismTabExample
 
         public App(IPlatformInitializer initializer): base(initializer)
         {
-
         }
 
         protected override void OnInitialized()
         {
             InitializeComponent();
-        }
-
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            NavigationService.NavigateAsync("/NavigationPage/MyTabbedPage?selectedTab=Tab1Page");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
+
+            containerRegistry.RegisterForNavigation<MyTabbedPage>();
             containerRegistry.RegisterForNavigation<Tab1Page, Tab1PageViewModel>();
             containerRegistry.RegisterForNavigation<Tab2Page, Tab2PageViewModel>();
 
             containerRegistry.RegisterForNavigation<FirstPage, FirstPageViewModel>();
             containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
+
+            containerRegistry.RegisterForNavigation<MainPage>();
         }
     }
 }

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Xamarin.Forms;
 
-namespace PrismTabExample.View
+namespace PrismTabExample.Views
 {
-    public partial class Tab1Page : ContentPage
+    public partial class SecondPage : ContentPage
     {
-        public Tab1Page()
+        public SecondPage()
         {
             InitializeComponent();
         }
