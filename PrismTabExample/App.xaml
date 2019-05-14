@@ -5,5 +5,16 @@
     x:Class="PrismTabExample.App"
     xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style
+                TargetType="Button">
+                <Setter
+                    Property="FontSize"
+                    Value="20" />
+                <Setter
+                    Property="TextColor"
+                    Value="Black" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

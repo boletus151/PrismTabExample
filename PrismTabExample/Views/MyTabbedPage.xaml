@@ -6,6 +6,15 @@
     xmlns:local="clr-namespace:PrismTabExample.Views">
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
-        <local:Tab1Page></local:Tab1Page>
+        <NavigationPage Title="First">
+            <x:Arguments>
+                <local:Tab1Page></local:Tab1Page>
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Second">
+            <x:Arguments>
+                <local:Tab2Page></local:Tab2Page>
+            </x:Arguments>
+        </NavigationPage>
     </TabbedPage.Children>
 </TabbedPage>

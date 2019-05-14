@@ -19,7 +19,7 @@ namespace PrismTabExample.ViewModels
         private async Task GoToCommandExecute()
         {
             await this.NavigationService.GoBackAsync();
-            await this.NavigationService.NavigateAsync(nameof(SecondPage), null, true, true);
+            await this.NavigationService.NavigateAsync(nameof(Tab1Page), null, false, true);
         }
     }
 }

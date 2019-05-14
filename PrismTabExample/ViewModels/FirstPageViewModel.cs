@@ -5,7 +5,7 @@ using PrismTabExample.Views;
 
 namespace PrismTabExample.ViewModels
 {
-    public class FirstPageViewModel : BindableBase
+    public class FirstPageViewModel : ViewModelBase
     {
         public FirstPageViewModel(INavigationService navigationService) : base(navigationService)
         {
