@@ -2,13 +2,14 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PrismTabExample.Views.FirstPage"
-    BackgroundColor="Green">
+    x:Class="PrismTabExample.Views.Modal3Page"
+    BackgroundColor="Olive">
+    
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             <Button
-                Command="{Binding GoToSecondPageCommand}"
-                Text="Go to first page">
+                Command="{Binding Modal4Command}"
+                Text="Go To Modal 4">
             </Button>
         </StackLayout>
     </ContentPage.Content>

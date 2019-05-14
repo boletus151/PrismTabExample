@@ -12,7 +12,7 @@ namespace PrismTabExample
     {
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer): base(initializer)
+        public App(IPlatformInitializer initializer) : base(initializer)
         {
         }
 
@@ -27,13 +27,18 @@ namespace PrismTabExample
             containerRegistry.RegisterForNavigation<NavigationPage>();
 
             containerRegistry.RegisterForNavigation<MyTabbedPage>();
-            containerRegistry.RegisterForNavigation<Tab1Page, Tab1PageViewModel>();
-            containerRegistry.RegisterForNavigation<Tab2Page, Tab2PageViewModel>();
+            containerRegistry.RegisterForNavigation<Tab1Page, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<Tab2Page, MainPageViewModel>();
 
-            containerRegistry.RegisterForNavigation<FirstPage, FirstPageViewModel>();
-            containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
+            containerRegistry.RegisterForNavigation<FirstPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<SecondPage, MainPageViewModel>();
 
-            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+
+            containerRegistry.RegisterForNavigation<Tab2Page, ModalViewModel>();
+            containerRegistry.RegisterForNavigation<Modal2Page, ModalViewModel>();
+            containerRegistry.RegisterForNavigation<Modal3Page, ModalViewModel>();
+            containerRegistry.RegisterForNavigation<Modal4Page, ModalViewModel>();
         }
     }
 }

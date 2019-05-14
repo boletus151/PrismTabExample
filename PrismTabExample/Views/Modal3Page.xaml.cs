@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace PrismTabExample.Views
 {
-    public partial class Tab2Page : ContentPage
+    public partial class Modal3Page : ContentPage
     {
-        public Tab2Page()
+        public Modal3Page()
         {
             InitializeComponent();
         }

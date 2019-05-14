@@ -6,9 +6,12 @@
     Title="Tab1Page"
     BackgroundColor="Gray">
     <ContentPage.Content>
-        <StackLayout>
-        <Button Command="{Binding GoToPageCommand}"
-                Text="Go to first page"></Button>
-    </StackLayout>
+        <StackLayout
+            VerticalOptions="Center">
+            <Button
+                Command="{Binding GoToFirstPageCommand}"
+                Text="Go to first page">
+            </Button>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

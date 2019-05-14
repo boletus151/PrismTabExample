@@ -3,12 +3,17 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PrismTabExample.Views.SecondPage"
+    Title="Second Page"
     BackgroundColor="Red">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             <Button
-                Command="{Binding GoToPageCommand}"
+                Command="{Binding GoBackCommand}"
                 Text="Go Back">
+            </Button>
+            <Button
+                Command="{Binding GoForwardCommand}"
+                Text="Go Forward">
             </Button>
         </StackLayout>
     </ContentPage.Content>

@@ -11,10 +11,11 @@
                 <local:Tab1Page></local:Tab1Page>
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="Second">
+        <NavigationPage Title="Modal">
             <x:Arguments>
                 <local:Tab2Page></local:Tab2Page>
             </x:Arguments>
         </NavigationPage>
+        
     </TabbedPage.Children>
 </TabbedPage>

@@ -3,13 +3,15 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PrismTabExample.Views.Tab2Page"
-    Title="Tab2Page"
-    BackgroundColor="Gray">
+    xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    mvvm:ViewModelLocator.AutowireViewModel="True"
+    Title="Modal">
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Button
-                Command="{Binding GoToPageCommand}"
-                Text="Go to first page">
+                Command="{Binding Modal2Command}"
+                Text="Go Modal 2">
             </Button>
         </StackLayout>
     </ContentPage.Content>
