@@ -13,6 +13,10 @@
                 Command="{Binding GoBackCommand}"
                 Text="Go to Back To First Tab">
             </Button>
+            <Button
+                Command="{Binding PopCommand}"
+                Text="Go Back">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -10,6 +10,7 @@ namespace PrismTabExample.Views
         public Modal2Page()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

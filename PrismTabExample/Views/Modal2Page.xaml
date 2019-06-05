@@ -13,7 +13,7 @@
             </Button>
             <Button
                 Command="{Binding CancelCommand}"
-                Text="Cancel All">
+                Text="Go Back">
             </Button>
         </StackLayout>
     </ContentPage.Content>

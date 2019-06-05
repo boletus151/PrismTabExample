@@ -11,6 +11,10 @@
                 Command="{Binding Modal4Command}"
                 Text="Go To Modal 4">
             </Button>
+            <Button
+                Command="{Binding PopCommand}"
+                Text="Go Back">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -14,6 +14,7 @@ namespace PrismTabExample.ViewModels
             this.Modal4Command = new DelegateCommand(() => this.NavigationService.NavigateAsync(nameof(Modal4Page)));
 
             //this.GoBackCommand = new DelegateCommand(() => this.NavigationService.GoBackAsync(new NavigationParameters { { "fromModal4", true } }));
+            this.PopCommand = new DelegateCommand(async() => await this.NavigationService.GoBackAsync());
             this.GoBackCommand = new DelegateCommand(() => this.NavigationService.NavigateAsync($"/{nameof(MyTabbedPage)}?selectedTab={nameof(Tab1Page)}"));
             this.CancelCommand = new DelegateCommand(this.CancelCommandExectue);
         }
@@ -28,6 +29,8 @@ namespace PrismTabExample.ViewModels
         public DelegateCommand Modal3Command { get; }
 
         public DelegateCommand GoBackCommand { get; }
+
+        public DelegateCommand PopCommand { get; }
 
         public DelegateCommand Modal4Command { get; }
 
