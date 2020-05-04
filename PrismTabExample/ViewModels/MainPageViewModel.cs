@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Prism.Commands;
 using Prism.Navigation;
 using PrismTabExample.Views;
@@ -13,7 +14,8 @@ namespace PrismTabExample.ViewModels
             this.GoToSecondPageCommand = new DelegateCommand(() => this.NavigationService.NavigateAsync(nameof(SecondPage), null, true, true));
 
             this.GoForwardCommand = new DelegateCommand(() => this.NavigationService.NavigateAsync(nameof(MainPage)));
-            this.GoBackCommand = new DelegateCommand(() => this.NavigationService.GoBackAsync());
+            this.GoBackCommand = new DelegateCommand(() => this.NavigationService.GoBackAsync(new NavigationParameters { { "parameter", "parameter" } }));
+            this.GoBackWithParametersCommand = new DelegateCommand(() => this.NavigationService.GoBackAsync());
         }
 
         public DelegateCommand GoToFirstPageCommand { get; }
@@ -21,17 +23,18 @@ namespace PrismTabExample.ViewModels
 
         public DelegateCommand GoForwardCommand { get; }
         public DelegateCommand GoBackCommand { get; }
+        public DelegateCommand GoBackWithParametersCommand { get; }
 
         public DelegateCommand GoToMainPageCommand { get; }
 
-        public override void OnNavigatedTo(INavigationParameters parameters)
+        public override Task InitializeAsync (INavigationParameters parameters)
         {
-            base.OnNavigatedFrom(parameters);
             var from = parameters.GetValue<bool>("fromMainPage");
             if (from)
             {
-                this.NavigationService.NavigateAsync(nameof(Tab1Page));
+                return this.NavigationService.NavigateAsync(nameof(Tab1Page));
             }
+            return Task.CompletedTask;
         }
     }
 }

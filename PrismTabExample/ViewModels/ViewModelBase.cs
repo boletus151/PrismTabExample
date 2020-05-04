@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Prism.Mvvm;
 using Prism.Navigation;
 
 namespace PrismTabExample.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware
+    public class ViewModelBase : BindableBase, IInitializeAsync
     {
         public INavigationService NavigationService { get; set; }
 
@@ -13,16 +14,9 @@ namespace PrismTabExample.ViewModels
             this.NavigationService = navigationService;
         }
 
-        public virtual void OnNavigatedFrom(INavigationParameters parameters)
+        public virtual Task InitializeAsync(INavigationParameters parameters)
         {
-        }
-
-        public virtual void OnNavigatedTo(INavigationParameters parameters)
-        {
-        }
-
-        public virtual void OnNavigatingTo(INavigationParameters parameters)
-        {
+            return Task.CompletedTask;
         }
     }
 }

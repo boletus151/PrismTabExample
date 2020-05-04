@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Prism.Commands;
 using Prism.Navigation;
 using PrismTabExample.Views;
@@ -33,9 +34,8 @@ namespace PrismTabExample.ViewModels
 
         public DelegateCommand CancelCommand { get; }
 
-        public override void OnNavigatedTo(INavigationParameters parameters)
+        public override Task InitializeAsync(INavigationParameters parameters)
         {
-            base.OnNavigatedFrom(parameters);
             var from = parameters.GetValue<bool>("fromModal4");
             if (from)
             {
@@ -56,6 +56,7 @@ namespace PrismTabExample.ViewModels
             {
                 this.NavigationService.NavigateAsync($"{nameof(Tab1Page)}?selectedTab=Tab1Page");
             }
+            return Task.CompletedTask;
         }
     }
 }

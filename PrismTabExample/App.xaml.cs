@@ -16,7 +16,7 @@ namespace PrismTabExample
         {
         }
 
-        protected override void OnInitialized()
+        protected override async void OnInitialized()
         {
             InitializeComponent();
             NavigationService.NavigateAsync("/MyTabbedPage?selectedTab=Tab1Page");

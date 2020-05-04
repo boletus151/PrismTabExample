@@ -10,6 +10,10 @@
                 Command="{Binding GoToSecondPageCommand}"
                 Text="Go to first page">
             </Button>
+            <Button
+                Command="{Binding GoBackWithParametersCommand}"
+                Text="Go Back with Parameters">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
